@@ -9,7 +9,7 @@
 
 import Cocoa
 import Foundation
-import Appkit
+import AppKit
 
 class QPNetWorking: NSObject {
 
@@ -29,33 +29,34 @@ class QPNetWorking: NSObject {
     func getChannelList(completionHandle:(([ChannelModel])->Void) ,failureHandle:((error:NSError)->Void))->Void{
         request(.GET, "http://www.douban.com/j/app/radio/channels", parameters: nil, encoding: .JSON)
 //        request(.GET, "http://www.douban.com/j/app/radio/channels", parameters: nil)
-        .responseJSON { (urlRequest, response, anyObject, error) -> Void in
             
-            if ((anyObject) == nil){
-                failureHandle(error: error!)
-                return
-            }
-            
-            var array=[ChannelModel]()
-
-            let responseDic=anyObject as Dictionary<String,[Dictionary<String,AnyObject>]>;
-            let responseArray=responseDic["channels"]!
-            
-            for dic in responseArray{
-                let name_en=dic["name_en"] as String
-                let seq_id=dic["seq_id"] as Int
-                let abbr_en=dic["abbr_en"] as String
-                let name=dic["name"] as String
-                var channel_id:String?=nil
-                if dic["channel_id"] is Int{
-                    channel_id=String(format: "%d", dic["channel_id"] as Int)
-                }else if dic["channel_id"] is String{
-                    channel_id=dic["channel_id"] as? String
+            .responseJSON { (urlRequest, response, anyObject, error) -> Void in
+                if ((anyObject) == nil){
+                    failureHandle(error: error!)
+                    return
                 }
                 
-                let model=ChannelModel(name_en: name_en, seq_id: seq_id, abbr_en: abbr_en, name: name, channel_id:channel_id!)
-                array.append(model)
-            }
+                var array=[ChannelModel]()
+                
+                let responseDic=anyObject as! Dictionary<String,[Dictionary<String,AnyObject>]>;
+                let responseArray=responseDic["channels"]!
+                
+                for dic in responseArray{
+                    let name_en=dic["name_en"] as! String
+                    let seq_id=dic["seq_id"] as! Int
+                    let abbr_en=dic["abbr_en"] as! String
+                    let name=dic["name"] as! String
+                    var channel_id:String?=nil
+                    if dic["channel_id"] is Int{
+                        channel_id=String(format: "%d", dic["channel_id"] as! Int)
+                    }else if dic["channel_id"] is String{
+                        channel_id=dic["channel_id"] as? String
+                    }
+                    
+                    let model=ChannelModel(name_en: name_en, seq_id: seq_id, abbr_en: abbr_en, name: name, channel_id:channel_id!)
+                    array.append(model)
+
+        }
             completionHandle(array)
         }
     }
@@ -63,6 +64,7 @@ class QPNetWorking: NSObject {
         let string="http://douban.fm/j/mine/playlist?channel="+channelID
         
        request(.GET, string, parameters: nil, encoding: .JSON)
+        
         .responseJSON { (requestU, response, object, error) -> Void in
             if (object==nil){
                 failureHandle(error: error ?? NSError())
@@ -70,17 +72,17 @@ class QPNetWorking: NSObject {
             
             let url = requestU.URL
             
-            let responseDic=object as Dictionary<String,AnyObject>
+            let responseDic=object as! Dictionary<String,AnyObject>
             
-            let responseObject=responseDic["song"] as [Dictionary<String,AnyObject>]
+            let responseObject=responseDic["song"] as! [Dictionary<String,AnyObject>]
             
             var array_musicModel=[MusicModel]()
             for item in responseObject{
                 
-                let picture_url=item["picture"] as String
-                let url=item["url"] as String
-                let title=item["title"] as String
-                let albumTitle=item["albumtitle"] as String
+                let picture_url=item["picture"] as! String
+                let url=item["url"] as! String
+                let title=item["title"] as! String
+                let albumTitle=item["albumtitle"] as! String
                 
                 let model_music=MusicModel(picture: picture_url, url: url, title: title, albumtitle: albumTitle)
                 array_musicModel.append(model_music)

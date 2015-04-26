@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Appkit
+import AppKit
 import Foundation
 import QuartzCore
 
@@ -62,7 +62,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
 //        channelList.view.hidden=true
         
 //        self.window!.contentView=channelList.view;
-        self.window?.contentView!.addSubview(channelList.view);
+        self.window?.contentView.addSubview(channelList.view);
 
 //        channelList.view.alpha=1.0
 //        self.musicListTableView.alphaValue=0.0
@@ -204,7 +204,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
         
     }
     func tableViewSelectionIsChanging(aNotification: NSNotification!){
-        var tableView=aNotification.object as NSTableView
+        var tableView=aNotification.object as! NSTableView
         let index=tableView.selectedRow
         _selectIndex=index
         let model=self._muarray_musicModel[index] as MusicModel
@@ -240,7 +240,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
         
     }
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView?{
-        let tableCellView=tableView.makeViewWithIdentifier("SongCell", owner: self) as NSTableCellView
+        let tableCellView=tableView.makeViewWithIdentifier("SongCell", owner: self) as! NSTableCellView
         
         tableCellView.layer?.backgroundColor=NSColor.grayColor().CGColor
         let model=self._muarray_musicModel[row] as MusicModel

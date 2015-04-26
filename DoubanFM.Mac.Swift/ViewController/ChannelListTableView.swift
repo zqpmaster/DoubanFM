@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Appkit
+import AppKit
 import Foundation
 
 class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewDataSource{
@@ -51,7 +51,7 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
     func tableView(aTableView: NSTableView!, shouldSelectRow rowIndex: Int) -> Bool{
         return true;
     }
-    func selectionShouldChangeInTableView(aTableView: NSTableView!) -> Bool{
+    func selectionShouldChangeInTableView(aTableView: NSTableView) -> Bool{
         return true;
     }
     func tableViewSelectionDidChange(changeNotification aNotification: NSNotification!){
@@ -60,8 +60,8 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
 
         
     }
-    func tableViewSelectionIsChanging(aNotification: NSNotification!){
-        var tableView=aNotification.object as NSTableView
+    func tableViewSelectionIsChanging(aNotification: NSNotification){
+        var tableView=aNotification.object as! NSTableView
         let index=tableView.selectedRow
         
         let model=self._array_channelModel[index] as ChannelModel
@@ -69,9 +69,9 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
         self._windowController?._channelModel=model
     }
 
-    func tableView(tableView: NSTableView!, viewForTableColumn tableColumn: NSTableColumn!, row: Int) -> NSView!{
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView?{
     
-        let tableCellView=tableView.makeViewWithIdentifier("ChannelCell", owner: self) as NSTableCellView
+        let tableCellView=tableView.makeViewWithIdentifier("ChannelCell", owner: self) as! NSTableCellView
         let model=self._array_channelModel[row] as ChannelModel
         tableCellView.textField?.stringValue=model.name
         tableCellView.wantsLayer=true

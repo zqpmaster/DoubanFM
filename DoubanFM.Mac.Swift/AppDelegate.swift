@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Appkit
+import AppKit
 import Foundation
 
 class AppDelegate: NSObject, NSApplicationDelegate {
