@@ -1,2 +1,2 @@
 # DoubanFM.Mac.Swift
-豆瓣音乐Mac版 with swift
+豆瓣音乐Mac版 with Swift
