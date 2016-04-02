@@ -21,7 +21,7 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
 //        }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
 //        self.view.wantsLayer=true;
 //        self.view.layer?.backgroundColor=NSColor.blackColor().CGColor;
         // Do view setup here.
@@ -39,7 +39,7 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
         })
     }
     
-    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int{
+    func numberOfRowsInTableView(aTableView: NSTableView) -> Int{
     
         return self._array_channelModel.count;
     }
@@ -48,7 +48,7 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
 //        return model.name
 //    }
     
-    func tableView(aTableView: NSTableView!, shouldSelectRow rowIndex: Int) -> Bool{
+    func tableView(aTableView: NSTableView, shouldSelectRow rowIndex: Int) -> Bool{
         return true;
     }
     func selectionShouldChangeInTableView(aTableView: NSTableView) -> Bool{
@@ -61,7 +61,7 @@ class ChannelListTableView: NSViewController,NSTableViewDelegate,NSTableViewData
         
     }
     func tableViewSelectionIsChanging(aNotification: NSNotification){
-        var tableView=aNotification.object as! NSTableView
+        let tableView=aNotification.object as! NSTableView
         let index=tableView.selectedRow
         
         let model=self._array_channelModel[index] as ChannelModel

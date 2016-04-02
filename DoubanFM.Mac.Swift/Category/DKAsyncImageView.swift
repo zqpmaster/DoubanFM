@@ -67,7 +67,7 @@ class DKAsyncImageView: NSImageView, NSURLConnectionDelegate, NSURLConnectionDat
         self.errorImage = errorImage
         imageDownloadData = NSMutableData()
         
-        var URL = NSURL(string: url)
+        let URL = NSURL(string: url)
         
         if URL == nil {
             isLoadingImage = false
@@ -75,7 +75,7 @@ class DKAsyncImageView: NSImageView, NSURLConnectionDelegate, NSURLConnectionDat
             return
         }
             
-        var conn: NSURLConnection? = NSURLConnection(request: NSURLRequest(URL: URL!), delegate: self)
+        let conn: NSURLConnection? = NSURLConnection(request: NSURLRequest(URL: URL!), delegate: self)
         imageURLConnection = conn
         
         if usesSpinningWheel {
@@ -160,11 +160,11 @@ class DKAsyncImageView: NSImageView, NSURLConnectionDelegate, NSURLConnectionDat
                 
                 
             } else  {
-                println("Error forming image from data.")
+                Swift.print("Error forming image from data.")
                 failureReset()
             }
         } else {
-            println("Image data not downloaded correctly.")
+            Swift.print("Image data not downloaded correctly.")
             failureReset()
         }
     }
@@ -215,7 +215,7 @@ class DKAsyncImageView: NSImageView, NSURLConnectionDelegate, NSURLConnectionDat
             removeTrackingArea(trackingArea)
         }
         
-        let opts: NSTrackingAreaOptions = NSTrackingAreaOptions(NSTrackingAreaOptions.MouseEnteredAndExited.rawValue | NSTrackingAreaOptions.ActiveAlways.rawValue)
+        let opts: NSTrackingAreaOptions = NSTrackingAreaOptions(rawValue: NSTrackingAreaOptions.MouseEnteredAndExited.rawValue | NSTrackingAreaOptions.ActiveAlways.rawValue)
         trackingArea = NSTrackingArea(rect: self.bounds, options: opts, owner: self, userInfo: nil)
         if let trackingArea = trackingArea {
             self.addTrackingArea(trackingArea)

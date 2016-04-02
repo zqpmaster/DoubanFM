@@ -10,6 +10,7 @@
 import Cocoa
 import Foundation
 import AppKit
+import Alamofire
 
 class QPNetWorking: NSObject {
 
@@ -26,22 +27,28 @@ class QPNetWorking: NSObject {
         return YRSingleton.instance!
     }
     
-    func getChannelList(completionHandle:(([ChannelModel])->Void) ,failureHandle:((error:NSError)->Void))->Void{
-        request(.GET, "http://www.douban.com/j/app/radio/channels", parameters: nil, encoding: .JSON)
-//        request(.GET, "http://www.douban.com/j/app/radio/channels", parameters: nil)
-            
-            .responseJSON { (urlRequest, response, anyObject, error) -> Void in
-                if ((anyObject) == nil){
-                    failureHandle(error: error!)
+    func getChannelList(completionHandle:(([ChannelModel])->Void) ,failureHandle:((error:NSError)->Void))->Void
+    {
+         Alamofire.request(.GET, "http://www.douban.com/j/app/radio/channels", parameters: nil)
+            .responseJSON(completionHandler: { (response) in
+                if ((response.data) == nil){
+                    failureHandle(error: response.result.error ?? NSError.init(domain: "com.alamofire.douban", code: 400, userInfo: nil))
                     return
                 }
                 
                 var array=[ChannelModel]()
                 
-                let responseDic=anyObject as! Dictionary<String,[Dictionary<String,AnyObject>]>;
-                let responseArray=responseDic["channels"]!
+                let responseDic = response.result.value as? Dictionary<String,[Dictionary<String,AnyObject>]>;
+                if (nil == responseDic)
+                {
+                    failureHandle(error: response.result.error ?? NSError.init(domain: "com.alamofire.douban", code: 400, userInfo: nil))
+                    return
+                }
                 
-                for dic in responseArray{
+                let responseArray=responseDic!["channels"]!
+                
+                for dic in responseArray
+                {
                     let name_en=dic["name_en"] as! String
                     let seq_id=dic["seq_id"] as! Int
                     let abbr_en=dic["abbr_en"] as! String
@@ -56,23 +63,22 @@ class QPNetWorking: NSObject {
                     let model=ChannelModel(name_en: name_en, seq_id: seq_id, abbr_en: abbr_en, name: name, channel_id:channel_id!)
                     array.append(model)
 
-        }
+                }
             completionHandle(array)
-        }
+        })
     }
+    
     func getSongsListWithChannelId(channelID:String,completionHandle:(([MusicModel])->Void),failureHandle:((error:NSError)->Void)){
         let string="http://douban.fm/j/mine/playlist?channel="+channelID
         
        request(.GET, string, parameters: nil, encoding: .JSON)
         
-        .responseJSON { (requestU, response, object, error) -> Void in
-            if (object==nil){
-                failureHandle(error: error ?? NSError())
+        .responseJSON(completionHandler: { (response) in
+            if (response.data==nil){
+                failureHandle(error: response.result.error ?? NSError.init(domain: "com.alamofire.douban", code: 400, userInfo: nil))
             }
             
-            let url = requestU.URL
-            
-            let responseDic=object as! Dictionary<String,AnyObject>
+            let responseDic = response.result.value as! Dictionary<String,AnyObject>
             
             let responseObject=responseDic["song"] as! [Dictionary<String,AnyObject>]
             
@@ -88,7 +94,7 @@ class QPNetWorking: NSObject {
                 array_musicModel.append(model_music)
             }
             completionHandle(array_musicModel)
-        }
+        })
     }
   
     

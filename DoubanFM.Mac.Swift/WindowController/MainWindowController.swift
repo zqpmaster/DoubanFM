@@ -62,7 +62,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
 //        channelList.view.hidden=true
         
 //        self.window!.contentView=channelList.view;
-        self.window?.contentView.addSubview(channelList.view);
+        self.window?.contentView!.addSubview(channelList.view);
 
 //        channelList.view.alpha=1.0
 //        self.musicListTableView.alphaValue=0.0
@@ -93,7 +93,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
     @IBAction func nextSong(sender: AnyObject) {
         
         if _selectIndex+1<self._muarray_musicModel.count{
-            ++_selectIndex
+            _selectIndex += 1;
             let model=self._muarray_musicModel[_selectIndex] as MusicModel
             
             self.p_playMusicWithNSUrl(model,index:_selectIndex)
@@ -103,7 +103,8 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
     
     @IBAction func lastSong(sender: AnyObject) {
         if _selectIndex-1 > -1{
-            let model=self._muarray_musicModel[--_selectIndex] as MusicModel
+            _selectIndex -= 1;
+            let model=self._muarray_musicModel[_selectIndex] as MusicModel
             
             self.p_playMusicWithNSUrl(model,index:_selectIndex)
         }
@@ -127,11 +128,11 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
 //        })
     }
     
-    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int{
+    func numberOfRowsInTableView(aTableView: NSTableView) -> Int{
         
         return self._muarray_musicModel.count;
     }
-    func tableView(aTableView: NSTableView!, objectValueForTableColumn aTableColumn: NSTableColumn!, row rowIndex: Int) -> AnyObject!{
+    func tableView(aTableView: NSTableView, objectValueForTableColumn aTableColumn: NSTableColumn?, row rowIndex: Int) -> AnyObject?{
         let model=self._muarray_musicModel[rowIndex] as MusicModel
 
 //            if (self._player != nil)  {
@@ -140,10 +141,10 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
         return model.title
     }
     
-    func tableView(aTableView: NSTableView!, shouldSelectRow rowIndex: Int) -> Bool{
+    func tableView(aTableView: NSTableView, shouldSelectRow rowIndex: Int) -> Bool{
         return true;
     }
-    func selectionShouldChangeInTableView(aTableView: NSTableView!) -> Bool{
+    func selectionShouldChangeInTableView(aTableView: NSTableView) -> Bool{
         return true;
     }
     func tableViewSelectionDidChange(changeNotification aNotification: NSNotification!){    
@@ -203,8 +204,8 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
         
         
     }
-    func tableViewSelectionIsChanging(aNotification: NSNotification!){
-        var tableView=aNotification.object as! NSTableView
+    func tableViewSelectionIsChanging(aNotification: NSNotification){
+        let tableView=aNotification.object as! NSTableView
         let index=tableView.selectedRow
         _selectIndex=index
         let model=self._muarray_musicModel[index] as MusicModel
@@ -219,10 +220,6 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
 //        })
         self._player?.stop()
         dispatch_async(dispatch_get_main_queue(), {
-            //这里写需要大量时间的代码
-
-
-
             
             self._player=NSSound(contentsOfURL:musicUrl!,byReference:true)
             
@@ -236,7 +233,7 @@ class MainWindowController: NSWindowController ,NSTableViewDelegate,NSTableViewD
 //        })
         self.imageView.downloadImageFromURL(model!.picture)
     }
-    override  func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override  func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         
     }
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView?{
