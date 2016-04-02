@@ -1,4 +1,4 @@
-# DoubanFM.Mac.Swift
+# DoubanFM
 Simple DoubanFM of Mac with Swift
 
 
