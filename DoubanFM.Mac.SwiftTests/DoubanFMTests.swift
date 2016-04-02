@@ -1,6 +1,6 @@
 //
-//  DoubanFM_Mac_SwiftTests.swift
-//  DoubanFM.Mac.SwiftTests
+//  DoubanFMTests.swift
+//  DoubanFM.MacTests
 //
 //  Created by ZQP on 14-8-31.
 //  Copyright (c) 2014年 ZQP. All rights reserved.
@@ -9,7 +9,7 @@
 import Cocoa
 import XCTest
 
-class DoubanFM_Mac_SwiftTests: XCTestCase {
+class DoubanFMTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

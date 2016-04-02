@@ -1,6 +1,6 @@
 //
 //  MainWindowController.swift
-//  DoubanFM.Mac.Swift
+//  DoubanFM.Mac
 //
 //  Created by ZQP on 14-10-29.
 //  Copyright (c) 2014年 ZQP. All rights reserved.

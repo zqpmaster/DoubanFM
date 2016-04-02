@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "273C2B6E19B30222004E3618"
-               BuildableName = "DoubanFM.Mac.Swift.app"
-               BlueprintName = "DoubanFM.Mac.Swift"
-               ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "273C2B8019B30222004E3618"
-               BuildableName = "DoubanFM.Mac.SwiftTests.xctest"
-               BlueprintName = "DoubanFM.Mac.SwiftTests"
-               ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
+               BuildableName = "DoubanFM.Swift.app"
+               BlueprintName = "DoubanFM"
+               ReferencedContainer = "container:DoubanFM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "273C2B8019B30222004E3618"
-               BuildableName = "DoubanFM.Mac.SwiftTests.xctest"
-               BlueprintName = "DoubanFM.Mac.SwiftTests"
-               ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "273C2B6E19B30222004E3618"
-            BuildableName = "DoubanFM.Mac.Swift.app"
-            BlueprintName = "DoubanFM.Mac.Swift"
-            ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
+            BuildableName = "DoubanFM.Swift.app"
+            BlueprintName = "DoubanFM"
+            ReferencedContainer = "container:DoubanFM.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "273C2B6E19B30222004E3618"
-            BuildableName = "DoubanFM.Mac.Swift.app"
-            BlueprintName = "DoubanFM.Mac.Swift"
-            ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
+            BuildableName = "DoubanFM.Swift.app"
+            BlueprintName = "DoubanFM"
+            ReferencedContainer = "container:DoubanFM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "273C2B6E19B30222004E3618"
-            BuildableName = "DoubanFM.Mac.Swift.app"
-            BlueprintName = "DoubanFM.Mac.Swift"
-            ReferencedContainer = "container:DoubanFM.Mac.Swift.xcodeproj">
+            BuildableName = "DoubanFM.Swift.app"
+            BlueprintName = "DoubanFM"
+            ReferencedContainer = "container:DoubanFM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

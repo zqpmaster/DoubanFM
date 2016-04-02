@@ -13,7 +13,7 @@
 		273C2B7719B30222004E3618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C2B7619B30222004E3618 /* AppDelegate.swift */; };
 		273C2B7919B30222004E3618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273C2B7819B30222004E3618 /* Images.xcassets */; };
 		273C2B7C19B30222004E3618 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273C2B7A19B30222004E3618 /* MainMenu.xib */; };
-		273C2B8819B30222004E3618 /* DoubanFM_Mac_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C2B8719B30222004E3618 /* DoubanFM_Mac_SwiftTests.swift */; };
+		273C2B8819B30222004E3618 /* DoubanFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C2B8719B30222004E3618 /* DoubanFMTests.swift */; };
 		27BFF2BF1A0F0DE60082EAD9 /* QPPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFF2BE1A0F0DE60082EAD9 /* QPPlayer.swift */; };
 		27BFF2F81A0F10EF0082EAD9 /* apple-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BFF2C11A0F10EF0082EAD9 /* apple-key.png */; };
 		27BFF2F91A0F10EF0082EAD9 /* arrow-left-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BFF2C21A0F10EF0082EAD9 /* arrow-left-white.png */; };
@@ -166,15 +166,15 @@
 /* Begin PBXFileReference section */
 		272C07F21A0B0DDC0078C51D /* DKAsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAsyncImageView.swift; sourceTree = "<group>"; };
 		272C07F91A0B1EE50078C51D /* DockMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DockMenu.xib; sourceTree = "<group>"; };
-		273C2B6F19B30222004E3618 /* DoubanFM.Mac.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanFM.Mac.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273C2B6F19B30222004E3618 /* DoubanFM.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanFM.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273C2B7319B30222004E3618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273C2B7419B30222004E3618 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		273C2B7619B30222004E3618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		273C2B7819B30222004E3618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		273C2B7B19B30222004E3618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		273C2B8119B30222004E3618 /* DoubanFM.Mac.SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanFM.Mac.SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		273C2B8119B30222004E3618 /* DoubanFM.Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanFM.Swift.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273C2B8619B30222004E3618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		273C2B8719B30222004E3618 /* DoubanFM_Mac_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanFM_Mac_SwiftTests.swift; sourceTree = "<group>"; };
+		273C2B8719B30222004E3618 /* DoubanFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanFMTests.swift; sourceTree = "<group>"; };
 		27BFF2B91A0F0D500082EAD9 /* Swift-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-BridgingHeader.h"; sourceTree = "<group>"; };
 		27BFF2BE1A0F0DE60082EAD9 /* QPPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPPlayer.swift; sourceTree = "<group>"; };
 		27BFF2C11A0F10EF0082EAD9 /* apple-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-key.png"; sourceTree = "<group>"; };
@@ -285,8 +285,8 @@
 		273C2B6619B30222004E3618 = {
 			isa = PBXGroup;
 			children = (
-				273C2B7119B30222004E3618 /* DoubanFM.Mac.Swift */,
-				273C2B8419B30222004E3618 /* DoubanFM.Mac.SwiftTests */,
+				273C2B7119B30222004E3618 /* DoubanFM */,
+				273C2B8419B30222004E3618 /* DoubanFM.Tests */,
 				27E945321CAFBFE000CD2CEA /* Framework */,
 				273C2B7019B30222004E3618 /* Products */,
 				27E945151CAFB91700CD2CEA /* Alamofire.xcodeproj */,
@@ -296,13 +296,13 @@
 		273C2B7019B30222004E3618 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				273C2B6F19B30222004E3618 /* DoubanFM.Mac.Swift.app */,
-				273C2B8119B30222004E3618 /* DoubanFM.Mac.SwiftTests.xctest */,
+				273C2B6F19B30222004E3618 /* DoubanFM.Swift.app */,
+				273C2B8119B30222004E3618 /* DoubanFM.Swift.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		273C2B7119B30222004E3618 /* DoubanFM.Mac.Swift */ = {
+		273C2B7119B30222004E3618 /* DoubanFM */ = {
 			isa = PBXGroup;
 			children = (
 				273C2B7619B30222004E3618 /* AppDelegate.swift */,
@@ -318,6 +318,7 @@
 				273C2B7819B30222004E3618 /* Images.xcassets */,
 				273C2B7219B30222004E3618 /* Supporting Files */,
 			);
+			name = DoubanFM;
 			path = DoubanFM.Mac.Swift;
 			sourceTree = "<group>";
 		};
@@ -331,12 +332,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		273C2B8419B30222004E3618 /* DoubanFM.Mac.SwiftTests */ = {
+		273C2B8419B30222004E3618 /* DoubanFM.Tests */ = {
 			isa = PBXGroup;
 			children = (
-				273C2B8719B30222004E3618 /* DoubanFM_Mac_SwiftTests.swift */,
+				273C2B8719B30222004E3618 /* DoubanFMTests.swift */,
 				273C2B8519B30222004E3618 /* Supporting Files */,
 			);
+			name = DoubanFM.Tests;
 			path = DoubanFM.Mac.SwiftTests;
 			sourceTree = "<group>";
 		};
@@ -487,9 +489,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		273C2B6E19B30222004E3618 /* DoubanFM.Mac.Swift */ = {
+		273C2B6E19B30222004E3618 /* DoubanFM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 273C2B8B19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM.Mac.Swift" */;
+			buildConfigurationList = 273C2B8B19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM" */;
 			buildPhases = (
 				273C2B6B19B30222004E3618 /* Sources */,
 				273C2B6C19B30222004E3618 /* Frameworks */,
@@ -501,14 +503,14 @@
 			dependencies = (
 				27E945301CAFB9A600CD2CEA /* PBXTargetDependency */,
 			);
-			name = DoubanFM.Mac.Swift;
+			name = DoubanFM;
 			productName = DoubanFM.Mac.Swift;
-			productReference = 273C2B6F19B30222004E3618 /* DoubanFM.Mac.Swift.app */;
+			productReference = 273C2B6F19B30222004E3618 /* DoubanFM.Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		273C2B8019B30222004E3618 /* DoubanFM.Mac.SwiftTests */ = {
+		273C2B8019B30222004E3618 /* DoubanFMTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 273C2B8E19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM.Mac.SwiftTests" */;
+			buildConfigurationList = 273C2B8E19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFMTests" */;
 			buildPhases = (
 				273C2B7D19B30222004E3618 /* Sources */,
 				273C2B7E19B30222004E3618 /* Frameworks */,
@@ -519,9 +521,9 @@
 			dependencies = (
 				273C2B8319B30222004E3618 /* PBXTargetDependency */,
 			);
-			name = DoubanFM.Mac.SwiftTests;
+			name = DoubanFMTests;
 			productName = DoubanFM.Mac.SwiftTests;
-			productReference = 273C2B8119B30222004E3618 /* DoubanFM.Mac.SwiftTests.xctest */;
+			productReference = 273C2B8119B30222004E3618 /* DoubanFM.Swift.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -544,7 +546,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 273C2B6A19B30222004E3618 /* Build configuration list for PBXProject "DoubanFM.Mac.Swift" */;
+			buildConfigurationList = 273C2B6A19B30222004E3618 /* Build configuration list for PBXProject "DoubanFM" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -563,8 +565,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				273C2B6E19B30222004E3618 /* DoubanFM.Mac.Swift */,
-				273C2B8019B30222004E3618 /* DoubanFM.Mac.SwiftTests */,
+				273C2B6E19B30222004E3618 /* DoubanFM */,
+				273C2B8019B30222004E3618 /* DoubanFMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -718,7 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273C2B8819B30222004E3618 /* DoubanFM_Mac_SwiftTests.swift in Sources */,
+				273C2B8819B30222004E3618 /* DoubanFMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +729,7 @@
 /* Begin PBXTargetDependency section */
 		273C2B8319B30222004E3618 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 273C2B6E19B30222004E3618 /* DoubanFM.Mac.Swift */;
+			target = 273C2B6E19B30222004E3618 /* DoubanFM */;
 			targetProxy = 273C2B8219B30222004E3618 /* PBXContainerItemProxy */;
 		};
 		27E945301CAFB9A600CD2CEA /* PBXTargetDependency */ = {
@@ -840,7 +842,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.doubanfm.zqp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DoubanFM.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
 			};
 			name = Debug;
@@ -856,7 +858,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.doubanfm.zqp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DoubanFM.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
 			};
 			name = Release;
@@ -877,9 +879,9 @@
 				INFOPLIST_FILE = DoubanFM.Mac.SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZQP.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DoubanFM.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanFM.Mac.Swift.app/Contents/MacOS/DoubanFM.Mac.Swift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanFM.Swift.app/Contents/MacOS/DoubanFM.Swift";
 			};
 			name = Debug;
 		};
@@ -895,16 +897,16 @@
 				INFOPLIST_FILE = DoubanFM.Mac.SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZQP.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DoubanFM.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanFM.Mac.Swift.app/Contents/MacOS/DoubanFM.Mac.Swift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanFM.Swift.app/Contents/MacOS/DoubanFM.Swift";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		273C2B6A19B30222004E3618 /* Build configuration list for PBXProject "DoubanFM.Mac.Swift" */ = {
+		273C2B6A19B30222004E3618 /* Build configuration list for PBXProject "DoubanFM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273C2B8919B30222004E3618 /* Debug */,
@@ -913,7 +915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		273C2B8B19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM.Mac.Swift" */ = {
+		273C2B8B19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273C2B8C19B30222004E3618 /* Debug */,
@@ -922,7 +924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		273C2B8E19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFM.Mac.SwiftTests" */ = {
+		273C2B8E19B30222004E3618 /* Build configuration list for PBXNativeTarget "DoubanFMTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273C2B8F19B30222004E3618 /* Debug */,

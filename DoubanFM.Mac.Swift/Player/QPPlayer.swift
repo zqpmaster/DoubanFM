@@ -1,6 +1,6 @@
 //
 //  QPPlayer.swift
-//  DoubanFM.Mac.Swift
+//  DoubanFM.Mac
 //
 //  Created by ZQP on 14-11-9.
 //  Copyright (c) 2014年 ZQP. All rights reserved.
