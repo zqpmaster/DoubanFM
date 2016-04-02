@@ -318,8 +318,7 @@
 				273C2B7819B30222004E3618 /* Images.xcassets */,
 				273C2B7219B30222004E3618 /* Supporting Files */,
 			);
-			name = DoubanFM;
-			path = DoubanFM.Mac.Swift;
+			path = DoubanFM;
 			sourceTree = "<group>";
 		};
 		273C2B7219B30222004E3618 /* Supporting Files */ = {
@@ -339,7 +338,7 @@
 				273C2B8519B30222004E3618 /* Supporting Files */,
 			);
 			name = DoubanFM.Tests;
-			path = DoubanFM.Mac.SwiftTests;
+			path = DoubanFMTests;
 			sourceTree = "<group>";
 		};
 		273C2B8519B30222004E3618 /* Supporting Files */ = {
@@ -837,13 +836,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = DoubanFM.Mac.Swift/Info.plist;
+				INFOPLIST_FILE = DoubanFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.doubanfm.zqp;
 				PRODUCT_NAME = DoubanFM.Swift;
-				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM/Swift-BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -853,13 +852,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = DoubanFM.Mac.Swift/Info.plist;
+				INFOPLIST_FILE = DoubanFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.doubanfm.zqp;
 				PRODUCT_NAME = DoubanFM.Swift;
-				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM.Mac.Swift/Swift-BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoubanFM/Swift-BridgingHeader.h";
 			};
 			name = Release;
 		};
