@@ -1,4 +1,3 @@
 # DoubanFM.Mac.Swift
 豆瓣音乐Mac版 with Swift
-
-![Alt text](douban_fm.png =521x378)
+![](douban_fm.png =521x378)
